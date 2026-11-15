@@ -42,10 +42,11 @@ website:
       - icon: github
         href: https://github.com/r-users-tz
         aria-label: GitHub
-      # TODO: uncomment and fill in each account once it exists
-      # - icon: linkedin
-      #   href: https://www.linkedin.com/company/YOUR-PAGE
-      #   aria-label: LinkedIn
+      # Keep in sync with links.linkedin in _variables.yml
+      - icon: linkedin
+        href: https://www.linkedin.com/company/r-users-community-tanzania
+        aria-label: LinkedIn
+      # TODO: uncomment and fill in once the account exists
       # - icon: twitter-x
       #   href: https://x.com/YOUR-HANDLE
       #   aria-label: X (Twitter)

@@ -38,8 +38,8 @@ Every placeholder contains `TODO`. List them all with:
 grep -rn "TODO" --include="*.qmd" --include="*.yml" .
 ```
 
-1. **`_variables.yml`**: community email, WhatsApp/Meetup/LinkedIn links and the talk-proposal form.
-2. **`_quarto.yml`**: uncomment the social icons you use (GitHub is already on).
+1. **`_variables.yml`**: community email, WhatsApp and Meetup links and the talk-proposal form.
+2. **`_quarto.yml`**: uncomment the social icons you use (GitHub and LinkedIn are already on).
 3. **`about.qmd`**: write the "Our story" section in your own words, and add organiser photos to `images/people/`.
 4. **`events/2026-12-12-launch-meetup/`**: confirm the date, time and venue, and add the registration link. Delete the folder if you don't want this event.
 5. **Posts**: change `author:` in the two starter posts if you'd like them under your name.
