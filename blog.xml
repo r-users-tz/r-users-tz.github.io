@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Tanzanian R Users</title>
+<link>https://r-users-tz.github.io/blog.html</link>
+<atom:link href="https://r-users-tz.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<description>News, tutorials and stories from the Tanzanian R Users community.</description>
+<image>
+<url>https://r-users-tz.github.io/images/social-card.png</url>
+<title>Tanzanian R Users</title>
+<link>https://r-users-tz.github.io/blog.html</link>
+<height>76</height>
+<width>144</width>
+</image>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Your first steps in R: from numbers to a chart</title>
+  <dc:creator>The Tanzanian R Users team</dc:creator>
+  <link>https://r-users-tz.github.io/posts/2026-11-13-first-steps-in-r/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This tutorial is for people who have <strong>never used R before</strong>. By the end you’ll have written a few lines of code, summarised a small table of data and drawn a chart. It takes about 30 minutes.</p>
+<section id="install-r-and-an-editor" class="level2">
+<h2 class="anchored" data-anchor-id="install-r-and-an-editor">1. Install R and an editor</h2>
+<p>You need two free programs:</p>
+<ol type="1">
+<li><strong>R</strong>, the language itself. Download it from <a href="https://cran.r-project.org/">CRAN</a> and choose Windows, macOS or Linux.</li>
+<li><strong>An editor</strong> to write code in. Most beginners use <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>. <a href="https://positron.posit.co/">Positron</a> is a newer alternative from the same company.</li>
+</ol>
+<p>Install R first, then the editor. Open the editor and find the <strong>Console</strong>: that’s where you type the code below and press <strong>Enter</strong> to run it.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>No computer, or can’t install software?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://posit.cloud/">Posit Cloud</a> runs RStudio in your web browser. The free plan is enough for this tutorial.</p>
+</div>
+</div>
+</section>
+<section id="r-as-a-calculator" class="level2">
+<h2 class="anchored" data-anchor-id="r-as-a-calculator">2. R as a calculator</h2>
+<p>R can do arithmetic, just like a calculator:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1500</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 18000</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">38500</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 40250</code></pre>
+</div>
+</div>
+</section>
+<section id="saving-values-with--" class="level2">
+<h2 class="anchored" data-anchor-id="saving-values-with--">3. Saving values with <code>&lt;-</code></h2>
+<p>To keep a value for later, give it a name with the arrow <code>&lt;-</code>. Read it as “gets”:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">price_per_kg <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2500</span>      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># price of 1 kg of maize flour, in TZS</span></span>
+<span id="cb7-2">kilos_sold <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span></span>
+<span id="cb7-3"></span>
+<span id="cb7-4">price_per_kg <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> kilos_sold</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 45000</code></pre>
+</div>
+</div>
+<p>Names can contain letters, numbers, <code>_</code> and <code>.</code>, but can’t start with a number. Anything after <code>#</code> is a <strong>comment</strong>: R ignores it, but it helps people reading your code.</p>
+</section>
+<section id="many-values-at-once-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="many-values-at-once-vectors">4. Many values at once: vectors</h2>
+<p>A <strong>vector</strong> holds several values of the same kind. Create one with <code>c()</code>, which stands for “combine”. Here are a week of maize flour sales from a small duka (shop), Monday to Sunday:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">maize_sales <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">38500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">45000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">51000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">63000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">57000</span>)</span>
+<span id="cb9-2"></span>
+<span id="cb9-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(maize_sales)    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># total for the week</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 336500</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(maize_sales)   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># average per day</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 48071.43</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">max</span>(maize_sales)    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># best day</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 63000</code></pre>
+</div>
+</div>
+<p><code>sum()</code>, <code>mean()</code> and <code>max()</code> are <strong>functions</strong>: you give them something inside the brackets and they give you an answer back.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The shop and its numbers are made up for this tutorial.</p>
+</div>
+</div>
+</section>
+<section id="tables-of-data-data-frames" class="level2">
+<h2 class="anchored" data-anchor-id="tables-of-data-data-frames">5. Tables of data: data frames</h2>
+<p>Real data usually comes as a table, with rows and columns. In R a table is called a <strong>data frame</strong>. Let’s record a week of sales for three products:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1">sales <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(</span>
+<span id="cb15-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">day =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Mon"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Tue"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Wed"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Thu"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fri"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sat"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sun"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">times =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>),</span>
+<span id="cb15-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">product =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Maize flour"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Cooking oil"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sugar"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">each =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>),</span>
+<span id="cb15-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">amount_tzs =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb15-5">    <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">42000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">38500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">45000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">51000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">63000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">57000</span>,  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># maize flour</span></span>
+<span id="cb15-6">    <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">27500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">26000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">31000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">39000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">34500</span>,  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># cooking oil</span></span>
+<span id="cb15-7">    <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">19500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">17000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">28500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25000</span>   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># sugar</span></span>
+<span id="cb15-8">  )</span>
+<span id="cb15-9">)</span>
+<span id="cb15-10"></span>
+<span id="cb15-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">head</span>(sales)   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># show the first six rows</span></span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  day     product amount_tzs
+1 Mon Maize flour      42000
+2 Tue Maize flour      38500
+3 Wed Maize flour      45000
+4 Thu Maize flour      40000
+5 Fri Maize flour      51000
+6 Sat Maize flour      63000</code></pre>
+</div>
+</div>
+<p><code>rep()</code> repeats values, so we don’t have to type every day and product by hand. In practice you would usually read a table from a file, for example with <code>read.csv("sales.csv")</code>.</p>
+</section>
+<section id="add-on-packages" class="level2">
+<h2 class="anchored" data-anchor-id="add-on-packages">6. Add-on packages</h2>
+<p>Thousands of free <strong>packages</strong> add extra features to R. Two of the most popular are <strong>dplyr</strong>, for working with tables, and <strong>ggplot2</strong>, for charts. Install them once:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dplyr"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>))</span></code></pre></div></div>
+</div>
+<p>Then load them each time you start R:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb18-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span></code></pre></div></div>
+</div>
+</section>
+<section id="summarise-the-week" class="level2">
+<h2 class="anchored" data-anchor-id="summarise-the-week">7. Summarise the week</h2>
+<p>With dplyr we can ask: <em>how much did each product earn this week, and which was its best day?</em></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">weekly <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> sales <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb19-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">group_by</span>(product) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb19-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb19-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">total_tzs =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sum</span>(amount_tzs),</span>
+<span id="cb19-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">best_day =</span> day[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">which.max</span>(amount_tzs)]</span>
+<span id="cb19-6">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb19-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">desc</span>(total_tzs))</span>
+<span id="cb19-8"></span>
+<span id="cb19-9">weekly</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  product     total_tzs best_day
+  &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;   
+1 Maize flour    336500 Sat     
+2 Cooking oil    207000 Sat     
+3 Sugar          146500 Sat     </code></pre>
+</div>
+</div>
+<p>Read the <code>|&gt;</code> symbol (the <strong>pipe</strong>) as “and then”: take <code>sales</code>, <em>and then</em> group it by product, <em>and then</em> summarise each group, <em>and then</em> sort from largest to smallest.</p>
+<p>Altogether, the shop took in <strong>TZS 690,000</strong> this week, and Saturday was the busiest day for every product.</p>
+</section>
+<section id="your-first-chart" class="level2">
+<h2 class="anchored" data-anchor-id="your-first-chart">8. Your first chart</h2>
+<p>Finally, let’s draw it. ggplot2 builds a chart in layers, joined with <code>+</code>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(weekly, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> total_tzs, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">reorder</span>(product, total_tzs))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_col</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#0B6E2E"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_text</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">label =</span> scales<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">comma</span>(total_tzs)), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.15</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_continuous</span>(</span>
+<span id="cb21-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> scales<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">label_comma</span>(),</span>
+<span id="cb21-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">expand =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">expansion</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mult =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.15</span>))</span>
+<span id="cb21-7">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb21-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Maize flour brought in the most money this week"</span>,</span>
+<span id="cb21-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Total sales (TZS)"</span>,</span>
+<span id="cb21-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span></span>
+<span id="cb21-12">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">13</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb21-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.major.y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb21-16">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb21-17">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span></span>
+<span id="cb21-18">  )</span></code></pre></div></div>
+<div class="cell-output-display">
+<div id="fig-weekly-sales" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Horizontal bar chart of one week's sales. Maize flour earned TZS 336,500, cooking oil TZS 207,000 and sugar TZS 146,500.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-weekly-sales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://r-users-tz.github.io/posts/2026-11-13-first-steps-in-r/index_files/figure-html/fig-weekly-sales-1.png" class="img-fluid figure-img" alt="Horizontal bar chart of one week's sales. Maize flour earned TZS 336,500, cooking oil TZS 207,000 and sugar TZS 146,500." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-weekly-sales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Total sales per product over one week (made-up data).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Line by line:</p>
+<ul>
+<li><code>ggplot(weekly, aes(...))</code> chooses the data and what goes on each axis. <code>reorder()</code> sorts the bars by size.</li>
+<li><code>geom_col()</code> draws the bars.</li>
+<li><code>geom_text()</code> writes each total next to its bar.</li>
+<li><code>scale_x_continuous()</code> adds commas to the numbers on the axis.</li>
+<li><code>labs()</code> sets the title and axis labels.</li>
+<li><code>theme_minimal()</code> and <code>theme()</code> give it a clean look.</li>
+</ul>
+<p>Try changing the colour <code>"#0B6E2E"</code> or the title, then run the code again.</p>
+</section>
+<section id="what-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-next">What next?</h2>
+<p>Congratulations, you’ve written your first R code! To keep going:</p>
+<ul>
+<li>Work through the free book <a href="https://r4ds.hadley.nz/">R for Data Science</a>, the standard next step.</li>
+<li>Browse our <a href="../../resources.html">learning resources</a>, including Tanzanian data sources to practise on.</li>
+<li><a href="../../join.html">Join the community</a> and come to a meetup. Bring your questions.</li>
+</ul>
+<p>Stuck? Ask in our community channels. Everyone was a beginner once.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Tutorial</category>
+  <category>Beginners</category>
+  <guid>https://r-users-tz.github.io/posts/2026-11-13-first-steps-in-r/</guid>
+  <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Karibu! Welcome to the Tanzanian R Users community</title>
+  <dc:creator>The Tanzanian R Users team</dc:creator>
+  <link>https://r-users-tz.github.io/posts/2026-11-13-karibu/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Karibu sana! Welcome to the new home of <strong>Tanzanian R Users</strong>, a community for everyone in Tanzania who uses the R programming language, or would like to learn it.</p>
+<section id="why-a-community-for-r-users-in-tanzania" class="level2">
+<h2 class="anchored" data-anchor-id="why-a-community-for-r-users-in-tanzania">Why a community for R users in Tanzania?</h2>
+<p>R is free, open-source software for statistics, data analysis and visualisation. Across Tanzania, people already use it to analyse survey and health data, study crop yields and rainfall, write theses and build dashboards. But many of us learn alone, searching online late at night for the meaning of an error message.</p>
+<p>We think learning is faster, and a lot more fun, when we do it together. This community is a place to:</p>
+<ul>
+<li><strong>meet</strong> other people who use R, at your level and in your field;</li>
+<li><strong>learn</strong> through talks, hands-on workshops and study groups;</li>
+<li><strong>share</strong> code, tutorials, data sources and job opportunities;</li>
+<li><strong>grow</strong> a stronger data culture in Tanzania, one analysis at a time.</li>
+</ul>
+</section>
+<section id="what-were-planning" class="level2">
+<h2 class="anchored" data-anchor-id="what-were-planning">What we’re planning</h2>
+<p>Over the coming months we’ll start with:</p>
+<ol type="1">
+<li><strong>A launch meetup</strong> in Dar es Salaam, also streamed online. <a href="../../events/2026-12-12-launch-meetup/index.html">See the details</a>.</li>
+<li><strong>Regular meetups</strong> with short talks from members about how they use R.</li>
+<li><strong>Beginner workshops</strong> for people who have never written a line of code.</li>
+<li><strong>This blog</strong>, with tutorials, project write-ups and event recaps written by members. Our first tutorial, <a href="../../posts/2026-11-13-first-steps-in-r/index.html">Your first steps in R</a>, is already up.</li>
+</ol>
+<p>We’ll decide the rest together. Tell us what you’d find most useful.</p>
+</section>
+<section id="how-you-can-help" class="level2">
+<h2 class="anchored" data-anchor-id="how-you-can-help">How you can help</h2>
+<ul>
+<li><strong>Join our channels</strong> so you hear about events first. <a href="../../join.html">Find them here</a>.</li>
+<li><strong>Offer a lightning talk.</strong> Five minutes on anything you’ve done with R. First-time speakers are very welcome.</li>
+<li><strong>Write a blog post</strong> about a project, a package you love or something you learned the hard way.</li>
+<li><strong>Tell a friend</strong>, a classmate or a colleague who works with data.</li>
+</ul>
+</section>
+<section id="a-welcoming-space" class="level2">
+<h2 class="anchored" data-anchor-id="a-welcoming-space">A welcoming space</h2>
+<p>Everyone who takes part, online or in person, agrees to our <a href="../../code-of-conduct.html">Code of Conduct</a>. Conversations can happen in English and Kiswahili, and no question is too basic.</p>
+<p>Tuonane hivi karibuni. See you soon!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>News</category>
+  <category>Community</category>
+  <guid>https://r-users-tz.github.io/posts/2026-11-13-karibu/</guid>
+  <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

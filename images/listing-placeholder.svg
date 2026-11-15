@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Tanzanian R Users">
+  <rect width="800" height="450" fill="#0B6E2E"/>
+  <path d="M800 0V450H0Z" fill="#00658A"/>
+  <path d="M-40 490L840 -40" stroke="#FCD116" stroke-width="70"/>
+  <path d="M-40 490L840 -40" stroke="#111111" stroke-width="44"/>
+  <circle cx="400" cy="225" r="92" fill="#FFFFFF"/>
+  <text x="400" y="268" text-anchor="middle" font-family="Plus Jakarta Sans, Segoe UI, Helvetica, Arial, sans-serif" font-weight="800" font-size="124" fill="#0B6E2E">R</text>
+</svg>

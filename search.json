@@ -1,0 +1,394 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Everything on this page is free to use. Know a great resource we’ve missed? Tell us."
+  },
+  {
+    "objectID": "resources.html#getting-started",
+    "href": "resources.html#getting-started",
+    "title": "Resources",
+    "section": "Getting started",
+    "text": "Getting started\n\nR from CRAN\n\nDownload and install R itself, for Windows, macOS or Linux.\n\nRStudio Desktop or Positron\n\nEditors that make writing R code much easier. Install R first.\n\nPosit Cloud\n\nRun R in your web browser, with nothing to install.\n\nYour first steps in R\n\nOur own 30-minute tutorial for complete beginners.\n\nswirl\n\nLearn R interactively, inside R itself."
+  },
+  {
+    "objectID": "resources.html#free-online-books",
+    "href": "resources.html#free-online-books",
+    "title": "Resources",
+    "section": "Free online books",
+    "text": "Free online books\n\nR for Data Science (2nd edition)\n\nThe standard introduction to importing, cleaning, exploring and visualising data with the tidyverse.\n\nHands-On Programming with R\n\nLearn to program in R through small, practical projects.\n\nThe Epidemiologist R Handbook\n\nA practical reference for public health and epidemiology work, written by and for field epidemiologists.\n\nggplot2: Elegant Graphics for Data Analysis\n\nEverything you need to make clear, beautiful charts.\n\nGeocomputation with R\n\nWorking with maps and spatial data.\n\nTidy Modeling with R\n\nStatistical modelling and machine learning with the tidymodels packages.\n\nMastering Shiny\n\nBuild interactive web apps and dashboards in R.\n\nAdvanced R and R Packages\n\nFor when you’re ready to go deeper and share your own code.\n\nBig Book of R\n\nA searchable collection of hundreds of free R books, sorted by topic."
+  },
+  {
+    "objectID": "resources.html#courses-and-lessons",
+    "href": "resources.html#courses-and-lessons",
+    "title": "Resources",
+    "section": "Courses and lessons",
+    "text": "Courses and lessons\n\nData Carpentry\n\nFree, community-written lessons that teach data skills to researchers, with several R lessons.\n\nQuarto\n\nCreate reports, slides and websites (like this one) from your R code."
+  },
+  {
+    "objectID": "resources.html#tanzanian-and-regional-data",
+    "href": "resources.html#tanzanian-and-regional-data",
+    "title": "Resources",
+    "section": "Tanzanian and regional data",
+    "text": "Tanzanian and regional data\nPractise with data about the places and questions you care about.\n\nNational Bureau of Statistics (NBS)\n\nOfficial Tanzanian statistics, including census and survey reports.\n\nThe DHS Program\n\nDemographic and Health Surveys, including several rounds for Tanzania. Free registration is required to download data.\n\nWorld Bank Open Data\n\nDevelopment indicators for Tanzania and every other country. The WDI package downloads them straight into R.\n\nHumanitarian Data Exchange\n\nOpen datasets on Tanzania from humanitarian and development organisations."
+  },
+  {
+    "objectID": "resources.html#communities",
+    "href": "resources.html#communities",
+    "title": "Resources",
+    "section": "Communities",
+    "text": "Communities\n\nAfricaR\n\nA network connecting R users and groups across Africa.\n\nR-Ladies\n\nA worldwide organisation promoting gender diversity in the R community.\n\nrOpenSci\n\nOpen tools and a welcoming community for research software.\n\nPosit Community\n\nA friendly forum for questions about R, RStudio, Shiny and more.\n\nR Weekly\n\nA weekly round-up of R news, tutorials and packages."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "",
+    "text": "This tutorial is for people who have never used R before. By the end you’ll have written a few lines of code, summarised a small table of data and drawn a chart. It takes about 30 minutes."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#install-r-and-an-editor",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#install-r-and-an-editor",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "1. Install R and an editor",
+    "text": "1. Install R and an editor\nYou need two free programs:\n\nR, the language itself. Download it from CRAN and choose Windows, macOS or Linux.\nAn editor to write code in. Most beginners use RStudio Desktop. Positron is a newer alternative from the same company.\n\nInstall R first, then the editor. Open the editor and find the Console: that’s where you type the code below and press Enter to run it.\n\n\n\n\n\n\nTipNo computer, or can’t install software?\n\n\n\nPosit Cloud runs RStudio in your web browser. The free plan is enough for this tutorial."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#r-as-a-calculator",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#r-as-a-calculator",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "2. R as a calculator",
+    "text": "2. R as a calculator\nR can do arithmetic, just like a calculator:\n\n2 + 3\n\n[1] 5\n\n1500 * 12\n\n[1] 18000\n\n(42000 + 38500) / 2\n\n[1] 40250"
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#saving-values-with--",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#saving-values-with--",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "3. Saving values with <-",
+    "text": "3. Saving values with &lt;-\nTo keep a value for later, give it a name with the arrow &lt;-. Read it as “gets”:\n\nprice_per_kg &lt;- 2500      # price of 1 kg of maize flour, in TZS\nkilos_sold &lt;- 18\n\nprice_per_kg * kilos_sold\n\n[1] 45000\n\n\nNames can contain letters, numbers, _ and ., but can’t start with a number. Anything after # is a comment: R ignores it, but it helps people reading your code."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#many-values-at-once-vectors",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#many-values-at-once-vectors",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "4. Many values at once: vectors",
+    "text": "4. Many values at once: vectors\nA vector holds several values of the same kind. Create one with c(), which stands for “combine”. Here are a week of maize flour sales from a small duka (shop), Monday to Sunday:\n\nmaize_sales &lt;- c(42000, 38500, 45000, 40000, 51000, 63000, 57000)\n\nsum(maize_sales)    # total for the week\n\n[1] 336500\n\nmean(maize_sales)   # average per day\n\n[1] 48071.43\n\nmax(maize_sales)    # best day\n\n[1] 63000\n\n\nsum(), mean() and max() are functions: you give them something inside the brackets and they give you an answer back.\n\n\n\n\n\n\nNote\n\n\n\nThe shop and its numbers are made up for this tutorial."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#tables-of-data-data-frames",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#tables-of-data-data-frames",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "5. Tables of data: data frames",
+    "text": "5. Tables of data: data frames\nReal data usually comes as a table, with rows and columns. In R a table is called a data frame. Let’s record a week of sales for three products:\n\nsales &lt;- data.frame(\n  day = rep(c(\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"), times = 3),\n  product = rep(c(\"Maize flour\", \"Cooking oil\", \"Sugar\"), each = 7),\n  amount_tzs = c(\n    42000, 38500, 45000, 40000, 51000, 63000, 57000,  # maize flour\n    25000, 27500, 24000, 26000, 31000, 39000, 34500,  # cooking oil\n    18000, 16500, 19500, 17000, 22000, 28500, 25000   # sugar\n  )\n)\n\nhead(sales)   # show the first six rows\n\n  day     product amount_tzs\n1 Mon Maize flour      42000\n2 Tue Maize flour      38500\n3 Wed Maize flour      45000\n4 Thu Maize flour      40000\n5 Fri Maize flour      51000\n6 Sat Maize flour      63000\n\n\nrep() repeats values, so we don’t have to type every day and product by hand. In practice you would usually read a table from a file, for example with read.csv(\"sales.csv\")."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#add-on-packages",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#add-on-packages",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "6. Add-on packages",
+    "text": "6. Add-on packages\nThousands of free packages add extra features to R. Two of the most popular are dplyr, for working with tables, and ggplot2, for charts. Install them once:\n\ninstall.packages(c(\"dplyr\", \"ggplot2\"))\n\nThen load them each time you start R:\n\nlibrary(dplyr)\nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#summarise-the-week",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#summarise-the-week",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "7. Summarise the week",
+    "text": "7. Summarise the week\nWith dplyr we can ask: how much did each product earn this week, and which was its best day?\n\nweekly &lt;- sales |&gt;\n  group_by(product) |&gt;\n  summarise(\n    total_tzs = sum(amount_tzs),\n    best_day = day[which.max(amount_tzs)]\n  ) |&gt;\n  arrange(desc(total_tzs))\n\nweekly\n\n# A tibble: 3 × 3\n  product     total_tzs best_day\n  &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;   \n1 Maize flour    336500 Sat     \n2 Cooking oil    207000 Sat     \n3 Sugar          146500 Sat     \n\n\nRead the |&gt; symbol (the pipe) as “and then”: take sales, and then group it by product, and then summarise each group, and then sort from largest to smallest.\nAltogether, the shop took in TZS 690,000 this week, and Saturday was the busiest day for every product."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#your-first-chart",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#your-first-chart",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "8. Your first chart",
+    "text": "8. Your first chart\nFinally, let’s draw it. ggplot2 builds a chart in layers, joined with +:\n\nggplot(weekly, aes(x = total_tzs, y = reorder(product, total_tzs))) +\n  geom_col(fill = \"#0B6E2E\", width = 0.6) +\n  geom_text(aes(label = scales::comma(total_tzs)), hjust = -0.15, size = 4) +\n  scale_x_continuous(\n    labels = scales::label_comma(),\n    expand = expansion(mult = c(0, 0.15))\n  ) +\n  labs(\n    title = \"Maize flour brought in the most money this week\",\n    x = \"Total sales (TZS)\",\n    y = NULL\n  ) +\n  theme_minimal(base_size = 13) +\n  theme(\n    panel.grid.major.y = element_blank(),\n    panel.grid.minor = element_blank(),\n    plot.title.position = \"plot\"\n  )\n\n\n\n\n\n\n\nFigure 1: Total sales per product over one week (made-up data).\n\n\n\n\n\nLine by line:\n\nggplot(weekly, aes(...)) chooses the data and what goes on each axis. reorder() sorts the bars by size.\ngeom_col() draws the bars.\ngeom_text() writes each total next to its bar.\nscale_x_continuous() adds commas to the numbers on the axis.\nlabs() sets the title and axis labels.\ntheme_minimal() and theme() give it a clean look.\n\nTry changing the colour \"#0B6E2E\" or the title, then run the code again."
+  },
+  {
+    "objectID": "posts/2026-11-13-first-steps-in-r/index.html#what-next",
+    "href": "posts/2026-11-13-first-steps-in-r/index.html#what-next",
+    "title": "Your first steps in R: from numbers to a chart",
+    "section": "What next?",
+    "text": "What next?\nCongratulations, you’ve written your first R code! To keep going:\n\nWork through the free book R for Data Science, the standard next step.\nBrowse our learning resources, including Tanzanian data sources to practise on.\nJoin the community and come to a meetup. Bring your questions.\n\nStuck? Ask in our community channels. Everyone was a beginner once."
+  },
+  {
+    "objectID": "index.html#practical-r-skills-built-together",
+    "href": "index.html#practical-r-skills-built-together",
+    "title": "Home",
+    "section": "Practical R skills, built together",
+    "text": "Practical R skills, built together"
+  },
+  {
+    "objectID": "index.html#youre-welcome-here-whatever-your-level",
+    "href": "index.html#youre-welcome-here-whatever-your-level",
+    "title": "Home",
+    "section": "You’re welcome here, whatever your level",
+    "text": "You’re welcome here, whatever your level\nWhether you write R every day or have never opened RStudio, there’s a place for you. Conversations happen in English and Kiswahili."
+  },
+  {
+    "objectID": "index.html#coming-up",
+    "href": "index.html#coming-up",
+    "title": "Home",
+    "section": "Coming up",
+    "text": "Coming up"
+  },
+  {
+    "objectID": "index.html#latest-from-the-community",
+    "href": "index.html#latest-from-the-community",
+    "title": "Home",
+    "section": "Latest from the community",
+    "text": "Latest from the community"
+  },
+  {
+    "objectID": "index.html#help-shape-the-community-from-the-start",
+    "href": "index.html#help-shape-the-community-from-the-start",
+    "title": "Home",
+    "section": "Help shape the community from the start",
+    "text": "Help shape the community from the start\nWe’re just getting started, and the people who join now will decide what this community becomes. Come to a meetup, give a talk, share a resource or help organise.\n\nGet involved Read our Code of Conduct"
+  },
+  {
+    "objectID": "events.html",
+    "href": "events.html",
+    "title": "Events",
+    "section": "",
+    "text": "Dec\n      12\n      2026\n    \n    \n    \n      \n      \n        Date: 12 Dec 2026\n        14:00–17:00 EAT\n        Dar es Salaam (venue to be announced) and online\n        Hybrid\n      \n      Our first gathering. Meet other R users, hear our plans for the year and tell us what you'd like this community to do.\n    \n  \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events.html#upcoming-events",
+    "href": "events.html#upcoming-events",
+    "title": "Events",
+    "section": "",
+    "text": "Dec\n      12\n      2026\n    \n    \n    \n      \n      \n        Date: 12 Dec 2026\n        14:00–17:00 EAT\n        Dar es Salaam (venue to be announced) and online\n        Hybrid\n      \n      Our first gathering. Meet other R users, hear our plans for the year and tell us what you'd like this community to do.\n    \n  \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events.html#past-events",
+    "href": "events.html#past-events",
+    "title": "Events",
+    "section": "Past events",
+    "text": "Past events\n\n\nPast events will appear here, with slides, code and recordings where we have them.\n\nNo matching items"
+  },
+  {
+    "objectID": "events.html#run-an-event-with-us",
+    "href": "events.html#run-an-event-with-us",
+    "title": "Events",
+    "section": "Run an event with us",
+    "text": "Run an event with us\nWant to give a talk, teach a workshop or host a meetup at your university, office or hub? We’d love to hear from you. See how to get involved."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Want to write for the blog? Tutorials, project write-ups and event recaps are all welcome. See how to contribute a post.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYour first steps in R: from numbers to a chart\n\n\n\nTutorial\n\nBeginners\n\n\n\n\nA gentle introduction for complete beginners. Install R, do some sums, build a small table of shop sales and draw your first chart.\n\n\n\n\n\n\nNov 13, 2026\n\n\nThe Tanzanian R Users team\n\n5 min\n\n\n\n\n\n\n\n\n\n\n\nKaribu! Welcome to the Tanzanian R Users community\n\n\n\nNews\n\nCommunity\n\n\n\n\nWhy we started this community, what we’re planning and how you can be part of it from day one.\n\n\n\n\n\n\nNov 13, 2026\n\n\nThe Tanzanian R Users team\n\n2 min\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About us",
+    "section": "",
+    "text": "Tanzanian R Users (Jumuiya ya Watumiaji wa R Tanzania) was founded in 2026 to bring together people across Tanzania who use R, the free and open-source language for statistics, data analysis and visualisation.\nR is already used in Tanzanian universities, research institutes, hospitals, government offices and NGOs. Yet many users learn on their own, with few chances to meet peers, find a mentor or see how others solve the same problems. We started this community to change that."
+  },
+  {
+    "objectID": "about.html#our-story",
+    "href": "about.html#our-story",
+    "title": "About us",
+    "section": "",
+    "text": "Tanzanian R Users (Jumuiya ya Watumiaji wa R Tanzania) was founded in 2026 to bring together people across Tanzania who use R, the free and open-source language for statistics, data analysis and visualisation.\nR is already used in Tanzanian universities, research institutes, hospitals, government offices and NGOs. Yet many users learn on their own, with few chances to meet peers, find a mentor or see how others solve the same problems. We started this community to change that."
+  },
+  {
+    "objectID": "about.html#mission",
+    "href": "about.html#mission",
+    "title": "About us",
+    "section": "Mission",
+    "text": "Mission\nTo build a welcoming, inclusive community where people in Tanzania learn R, share knowledge and use data to address local challenges."
+  },
+  {
+    "objectID": "about.html#vision",
+    "href": "about.html#vision",
+    "title": "About us",
+    "section": "Vision",
+    "text": "Vision\nA Tanzania where anyone, in any region and at any level, can find the skills, mentors and peers they need to turn data into insight."
+  },
+  {
+    "objectID": "about.html#what-we-value",
+    "href": "about.html#what-we-value",
+    "title": "About us",
+    "section": "What we value",
+    "text": "What we value\n\nEveryone is welcome\n\nBeginners and experts, students and professionals, from every region and background.\n\nLearning by doing\n\nPractical, hands-on sessions built around real problems and real data.\n\nOpen knowledge\n\nWe share slides, code and recordings openly so that anyone can learn from them.\n\nLocal relevance\n\nWe focus on the data and questions that matter in Tanzania.\n\nRespect\n\nEveryone in our spaces follows our Code of Conduct."
+  },
+  {
+    "objectID": "about.html#organisers",
+    "href": "about.html#organisers",
+    "title": "About us",
+    "section": "Organisers",
+    "text": "Organisers\n\n\n\n\n\n\nKaiza Ilomo\nFounder & Lead Organizer\n\n\n\n\n\n\n\nCould this be you?\nWe’re looking for volunteers to help run events, teach and spread the word. Find out how."
+  },
+  {
+    "objectID": "about.html#part-of-a-global-community",
+    "href": "about.html#part-of-a-global-community",
+    "title": "About us",
+    "section": "Part of a global community",
+    "text": "Part of a global community\nR users around the world organise local groups, and we’re proud to join them. If you’d like to see what’s happening beyond Tanzania, have a look at AfricaR, R-Ladies and the R Consortium, which supports R user groups worldwide."
+  },
+  {
+    "objectID": "about.html#partners-and-supporters",
+    "href": "about.html#partners-and-supporters",
+    "title": "About us",
+    "section": "Partners and supporters",
+    "text": "Partners and supporters\nWe’re grateful to the organisations that help us with venues, funding and expertise. Interested in supporting the community? Here’s how."
+  },
+  {
+    "objectID": "code-of-conduct.html",
+    "href": "code-of-conduct.html",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "Tanzanian R Users is dedicated to providing a welcoming, safe and harassment-free experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, ethnicity, tribe, nationality, religion, language, level of experience, or field of work.\nThis Code of Conduct applies to all community spaces: meetups, workshops, online events, our WhatsApp and other chat groups, social media, GitHub and this website. It applies to everyone: members, speakers, volunteers, organisers, sponsors and guests."
+  },
+  {
+    "objectID": "code-of-conduct.html#what-we-expect",
+    "href": "code-of-conduct.html#what-we-expect",
+    "title": "Code of Conduct",
+    "section": "What we expect",
+    "text": "What we expect\n\nBe welcoming and kind. Help newcomers. Every expert was once a beginner, and no question is too basic.\nBe respectful. Disagree with ideas, not people. Assume good intentions.\nBe inclusive. Use language that others can follow, in English or Kiswahili, and make space for quieter voices.\nGive credit. Acknowledge other people’s code, ideas and work.\nLook out for each other. If you see someone in distress or being treated badly, check on them or tell an organiser."
+  },
+  {
+    "objectID": "code-of-conduct.html#what-is-not-acceptable",
+    "href": "code-of-conduct.html#what-is-not-acceptable",
+    "title": "Code of Conduct",
+    "section": "What is not acceptable",
+    "text": "What is not acceptable\n\nHarassment, intimidation or discrimination of any kind.\nOffensive comments related to any of the personal characteristics listed above.\nSexual language or imagery, and unwelcome sexual attention or physical contact.\nInsults, put-downs, trolling or deliberately disrupting talks and discussions.\nPhotographing, recording or sharing someone’s personal information without their permission.\nSpam, and unsolicited advertising or recruitment in community channels.\nEncouraging any of the above."
+  },
+  {
+    "objectID": "code-of-conduct.html#reporting-a-problem",
+    "href": "code-of-conduct.html#reporting-a-problem",
+    "title": "Code of Conduct",
+    "section": "Reporting a problem",
+    "text": "Reporting a problem\nIf you experience or witness behaviour that breaks this Code of Conduct, please tell us as soon as you can:\n\nspeak to any organiser in person at an event; or\nemail TODO-community-email@example.org.\n\nAll reports are treated seriously and kept confidential. If a report involves an organiser, that person will not take part in handling it."
+  },
+  {
+    "objectID": "code-of-conduct.html#what-happens-next",
+    "href": "code-of-conduct.html#what-happens-next",
+    "title": "Code of Conduct",
+    "section": "What happens next",
+    "text": "What happens next\nOrganisers will listen, review what happened and decide on a response. Depending on the situation, this may include:\n\na private conversation or a warning;\nremoval from an event, chat group or online space;\na temporary or permanent ban from community activities;\nin serious cases, involving venue security or the authorities.\n\nWe will let the person who reported know what action we took, where appropriate."
+  },
+  {
+    "objectID": "code-of-conduct.html#credits",
+    "href": "code-of-conduct.html#credits",
+    "title": "Code of Conduct",
+    "section": "Credits",
+    "text": "Credits\nThis Code of Conduct draws on the codes of conduct of other open-source and R communities, including the Contributor Covenant and R-Ladies. It may be reused and adapted by other communities."
+  },
+  {
+    "objectID": "events/2026-12-12-launch-meetup/index.html",
+    "href": "events/2026-12-12-launch-meetup/index.html",
+    "title": "Community Launch Meetup",
+    "section": "",
+    "text": "Time 14:00–17:00 EAT\nWhere Dar es Salaam (venue to be announced) and online\nFormat Hybrid\nCost Free\nKaribu! This is the first official meetup of Tanzanian R Users. Whether you use R every day or you’re just curious about it, come and meet the people building an R community in Tanzania."
+  },
+  {
+    "objectID": "events/2026-12-12-launch-meetup/index.html#what-to-expect",
+    "href": "events/2026-12-12-launch-meetup/index.html#what-to-expect",
+    "title": "Community Launch Meetup",
+    "section": "What to expect",
+    "text": "What to expect\n\nWelcome and introductions. Who we are and why we started this community.\nLightning talks. Three or four short talks (5 minutes each) from members about how they use R. Want to give one?\nOpen discussion. What should we do in 2027? Workshops, study groups, hackathons, a conference? You decide.\nNetworking. Chai, conversation and new connections."
+  },
+  {
+    "objectID": "events/2026-12-12-launch-meetup/index.html#who-should-come",
+    "href": "events/2026-12-12-launch-meetup/index.html#who-should-come",
+    "title": "Community Launch Meetup",
+    "section": "Who should come",
+    "text": "Who should come\nEveryone is welcome: students, researchers, analysts, developers and complete beginners. You don’t need to bring a laptop."
+  },
+  {
+    "objectID": "events/2026-12-12-launch-meetup/index.html#how-to-register",
+    "href": "events/2026-12-12-launch-meetup/index.html#how-to-register",
+    "title": "Community Launch Meetup",
+    "section": "How to register",
+    "text": "How to register\nRegistration is free.  Join our community channels to get the registration link and venue details as soon as they’re confirmed.\nQuestions? Email us at TODO-community-email@example.org.\nAll our events follow the Code of Conduct."
+  },
+  {
+    "objectID": "join.html",
+    "href": "join.html",
+    "title": "Get involved",
+    "section": "",
+    "text": "Membership is free and open to everyone. Pick the channel that suits you:\n\n\n\n\n\n\n\nEvent announcements, quick questions and community news, straight to your phone.\nJoin on WhatsApp\n\n\n\n\n\n\n\n\nFollow our Meetup page to RSVP for events and get reminders.\nFollow on Meetup\n\n\n\n\n\n\n\n\nNews, event recaps and opportunities for data professionals in Tanzania.\nFollow on LinkedIn\n\n\n\n\n\n\n\n\nSlides, code from our workshops and the source of this website.\nSee us on GitHub"
+  },
+  {
+    "objectID": "join.html#join-our-channels",
+    "href": "join.html#join-our-channels",
+    "title": "Get involved",
+    "section": "",
+    "text": "Membership is free and open to everyone. Pick the channel that suits you:\n\n\n\n\n\n\n\nEvent announcements, quick questions and community news, straight to your phone.\nJoin on WhatsApp\n\n\n\n\n\n\n\n\nFollow our Meetup page to RSVP for events and get reminders.\nFollow on Meetup\n\n\n\n\n\n\n\n\nNews, event recaps and opportunities for data professionals in Tanzania.\nFollow on LinkedIn\n\n\n\n\n\n\n\n\nSlides, code from our workshops and the source of this website.\nSee us on GitHub"
+  },
+  {
+    "objectID": "join.html#speak",
+    "href": "join.html#speak",
+    "title": "Get involved",
+    "section": "Give a talk",
+    "text": "Give a talk\nWe’d love to hear how you use R, at any level. Every talk is welcome:\n\nLightning talks (5 minutes): one idea, one package, one trick.\nFull talks (20–30 minutes): a project, an analysis or a method.\nWorkshops (1–3 hours): hands-on teaching.\n\nFirst-time speakers are especially welcome, and we’ll gladly help you prepare.\nPropose a talk"
+  },
+  {
+    "objectID": "join.html#write",
+    "href": "join.html#write",
+    "title": "Get involved",
+    "section": "Write for the blog",
+    "text": "Write for the blog\nShare a tutorial, a project write-up, an event recap or a story about learning R. Posts can be in English or Kiswahili.\nSend your draft to TODO-community-email@example.org, or, if you know Git, open a pull request on our GitHub with a new folder in posts/."
+  },
+  {
+    "objectID": "join.html#volunteer",
+    "href": "join.html#volunteer",
+    "title": "Get involved",
+    "section": "Volunteer",
+    "text": "Volunteer\nThe community is run by volunteers. We’d love help with:\n\nplanning and running events;\nteaching or assisting at workshops;\nsocial media and design;\nthis website.\n\nEven an hour a month makes a difference. Email TODO-community-email@example.org to get started."
+  },
+  {
+    "objectID": "join.html#partner",
+    "href": "join.html#partner",
+    "title": "Get involved",
+    "section": "Partner with us",
+    "text": "Partner with us\nUniversities, companies, research institutes, NGOs and innovation hubs can support the community by:\n\nhosting a meetup or workshop at your venue;\nsponsoring refreshments, internet or prizes;\nsharing internships, jobs and data challenges with members.\n\nGet in touch at TODO-community-email@example.org."
+  },
+  {
+    "objectID": "join.html#contact",
+    "href": "join.html#contact",
+    "title": "Get involved",
+    "section": "Contact",
+    "text": "Contact\nFor anything else, email TODO-community-email@example.org."
+  },
+  {
+    "objectID": "posts/2026-11-13-karibu/index.html",
+    "href": "posts/2026-11-13-karibu/index.html",
+    "title": "Karibu! Welcome to the Tanzanian R Users community",
+    "section": "",
+    "text": "Karibu sana! Welcome to the new home of Tanzanian R Users, a community for everyone in Tanzania who uses the R programming language, or would like to learn it."
+  },
+  {
+    "objectID": "posts/2026-11-13-karibu/index.html#why-a-community-for-r-users-in-tanzania",
+    "href": "posts/2026-11-13-karibu/index.html#why-a-community-for-r-users-in-tanzania",
+    "title": "Karibu! Welcome to the Tanzanian R Users community",
+    "section": "Why a community for R users in Tanzania?",
+    "text": "Why a community for R users in Tanzania?\nR is free, open-source software for statistics, data analysis and visualisation. Across Tanzania, people already use it to analyse survey and health data, study crop yields and rainfall, write theses and build dashboards. But many of us learn alone, searching online late at night for the meaning of an error message.\nWe think learning is faster, and a lot more fun, when we do it together. This community is a place to:\n\nmeet other people who use R, at your level and in your field;\nlearn through talks, hands-on workshops and study groups;\nshare code, tutorials, data sources and job opportunities;\ngrow a stronger data culture in Tanzania, one analysis at a time."
+  },
+  {
+    "objectID": "posts/2026-11-13-karibu/index.html#what-were-planning",
+    "href": "posts/2026-11-13-karibu/index.html#what-were-planning",
+    "title": "Karibu! Welcome to the Tanzanian R Users community",
+    "section": "What we’re planning",
+    "text": "What we’re planning\nOver the coming months we’ll start with:\n\nA launch meetup in Dar es Salaam, also streamed online. See the details.\nRegular meetups with short talks from members about how they use R.\nBeginner workshops for people who have never written a line of code.\nThis blog, with tutorials, project write-ups and event recaps written by members. Our first tutorial, Your first steps in R, is already up.\n\nWe’ll decide the rest together. Tell us what you’d find most useful."
+  },
+  {
+    "objectID": "posts/2026-11-13-karibu/index.html#how-you-can-help",
+    "href": "posts/2026-11-13-karibu/index.html#how-you-can-help",
+    "title": "Karibu! Welcome to the Tanzanian R Users community",
+    "section": "How you can help",
+    "text": "How you can help\n\nJoin our channels so you hear about events first. Find them here.\nOffer a lightning talk. Five minutes on anything you’ve done with R. First-time speakers are very welcome.\nWrite a blog post about a project, a package you love or something you learned the hard way.\nTell a friend, a classmate or a colleague who works with data."
+  },
+  {
+    "objectID": "posts/2026-11-13-karibu/index.html#a-welcoming-space",
+    "href": "posts/2026-11-13-karibu/index.html#a-welcoming-space",
+    "title": "Karibu! Welcome to the Tanzanian R Users community",
+    "section": "A welcoming space",
+    "text": "A welcoming space\nEveryone who takes part, online or in person, agrees to our Code of Conduct. Conversations can happen in English and Kiswahili, and no question is too basic.\nTuonane hivi karibuni. See you soon!"
+  }
+]
