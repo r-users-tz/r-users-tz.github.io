@@ -1,0 +1,96 @@
+---
+title: "Resources"
+subtitle: "Free material to learn R, wherever you're starting from"
+description: "Free books, courses, communities and Tanzanian data sources for learning and practising R."
+toc: true
+toc-title: "On this page"
+---
+
+Everything on this page is free to use. Know a great resource we've missed? [Tell us](join.qmd#write).
+
+## Getting started
+
+[R from CRAN](https://cran.r-project.org/)
+: Download and install R itself, for Windows, macOS or Linux.
+
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/) or [Positron](https://positron.posit.co/)
+: Editors that make writing R code much easier. Install R first.
+
+[Posit Cloud](https://posit.cloud/)
+: Run R in your web browser, with nothing to install.
+
+[Your first steps in R](posts/2026-11-13-first-steps-in-r/index.qmd)
+: Our own 30-minute tutorial for complete beginners.
+
+[swirl](https://swirlstats.com/)
+: Learn R interactively, inside R itself.
+
+## Free online books
+
+[R for Data Science (2nd edition)](https://r4ds.hadley.nz/)
+: The standard introduction to importing, cleaning, exploring and visualising data with the tidyverse.
+
+[Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+: Learn to program in R through small, practical projects.
+
+[The Epidemiologist R Handbook](https://www.epirhandbook.com/)
+: A practical reference for public health and epidemiology work, written by and for field epidemiologists.
+
+[ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+: Everything you need to make clear, beautiful charts.
+
+[Geocomputation with R](https://r.geocompx.org/)
+: Working with maps and spatial data.
+
+[Tidy Modeling with R](https://www.tmwr.org/)
+: Statistical modelling and machine learning with the tidymodels packages.
+
+[Mastering Shiny](https://mastering-shiny.org/)
+: Build interactive web apps and dashboards in R.
+
+[Advanced R](https://adv-r.hadley.nz/) and [R Packages](https://r-pkgs.org/)
+: For when you're ready to go deeper and share your own code.
+
+[Big Book of R](https://www.bigbookofr.com/)
+: A searchable collection of hundreds of free R books, sorted by topic.
+
+## Courses and lessons
+
+[Data Carpentry](https://datacarpentry.org/lessons/)
+: Free, community-written lessons that teach data skills to researchers, with several R lessons.
+
+[Quarto](https://quarto.org/docs/get-started/)
+: Create reports, slides and websites (like this one) from your R code.
+
+## Tanzanian and regional data
+
+Practise with data about the places and questions you care about.
+
+[National Bureau of Statistics (NBS)](https://www.nbs.go.tz/)
+: Official Tanzanian statistics, including census and survey reports.
+
+[The DHS Program](https://dhsprogram.com/)
+: Demographic and Health Surveys, including several rounds for Tanzania. Free registration is required to download data.
+
+[World Bank Open Data](https://data.worldbank.org/country/tanzania)
+: Development indicators for Tanzania and every other country. The [WDI](https://cran.r-project.org/package=WDI) package downloads them straight into R.
+
+[Humanitarian Data Exchange](https://data.humdata.org/group/tza)
+: Open datasets on Tanzania from humanitarian and development organisations.
+
+## Communities
+
+[AfricaR](https://africa-r.org/)
+: A network connecting R users and groups across Africa.
+
+[R-Ladies](https://rladies.org/)
+: A worldwide organisation promoting gender diversity in the R community.
+
+[rOpenSci](https://ropensci.org/)
+: Open tools and a welcoming community for research software.
+
+[Posit Community](https://forum.posit.co/)
+: A friendly forum for questions about R, RStudio, Shiny and more.
+
+[R Weekly](https://rweekly.org/)
+: A weekly round-up of R news, tutorials and packages.

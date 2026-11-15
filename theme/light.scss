@@ -1,0 +1,41 @@
+/*-- scss:defaults --*/
+
+$primary: #0B6E2E;
+$info: #00658A;
+$body-bg: #FFFFFF;
+$body-color: #1B2620;
+$link-color: #0B6E2E;
+$code-color: #0B5E7A;
+
+$navbar-bg: #FFFFFF;
+$navbar-fg: #1B2620;
+$navbar-hl: #0B6E2E;
+
+$footer-bg: #0E1511;
+$footer-fg: #C9D4CD;
+
+/*-- scss:rules --*/
+
+:root {
+  --tz-hero-bg:
+    radial-gradient(48rem 28rem at 100% 0%, rgba(0, 163, 221, .10), transparent 65%),
+    radial-gradient(48rem 28rem at 0% 0%, rgba(30, 181, 58, .12), transparent 65%),
+    #FFFFFF;
+  --tz-section-alt-bg: #F4F8F5;
+  --tz-card-shadow: 0 10px 30px rgba(16, 40, 24, .08);
+  --tz-eyebrow: #0B6E2E;
+  --tz-eyebrow-bg: #E3F3E8;
+  --tz-kicker: #0B6E2E;
+  --tz-accent-1: #0B6E2E;
+  --tz-accent-2: #00658A;
+  --tz-date-head-bg: #0B6E2E;
+  --tz-past-head-bg: #5B6B61;
+  --tz-green-soft: #E3F3E8;
+  --tz-green-ink: #0B6E2E;
+  --tz-blue-soft: #E0F2F9;
+  --tz-blue-ink: #00658A;
+  --tz-yellow-soft: #FFF5C7;
+  --tz-yellow-ink: #6E5300;
+  --tz-dark-soft: #E9EDEA;
+  --tz-dark-ink: #1B2620;
+}

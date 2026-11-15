@@ -1,0 +1,76 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - images/
+  render:
+    - "*.qmd"
+    - "events/**/*.qmd"
+    - "posts/**/*.qmd"
+
+website:
+  title: "Tanzanian R Users"
+  description: "A community for R users in Tanzania. Learn, share and grow together."
+  # The site's public address (used for the RSS feed and social cards).
+  # Change this if you move to your own domain.
+  site-url: "https://r-users-tz.github.io"
+  repo-url: "https://github.com/r-users-tz/r-users-tz.github.io"
+  favicon: images/logo.svg
+  image: images/social-card.png
+  open-graph: true
+  twitter-card: true
+  search: true
+  back-to-top-navigation: true
+  navbar:
+    logo: images/logo.svg
+    logo-alt: "Tanzanian R Users logo"
+    title: "Tanzanian R Users"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: events.qmd
+        text: Events
+      - href: blog.qmd
+        text: Blog
+      - href: resources.qmd
+        text: Resources
+      - href: join.qmd
+        text: Get involved
+    right:
+      - icon: github
+        href: https://github.com/r-users-tz
+        aria-label: GitHub
+      # TODO: uncomment and fill in each account once it exists
+      # - icon: linkedin
+      #   href: https://www.linkedin.com/company/YOUR-PAGE
+      #   aria-label: LinkedIn
+      # - icon: twitter-x
+      #   href: https://x.com/YOUR-HANDLE
+      #   aria-label: X (Twitter)
+      - icon: rss
+        href: blog.xml
+        aria-label: Blog RSS feed
+  page-footer:
+    left: "© 2026 Tanzanian R Users"
+    center:
+      - text: "Code of Conduct"
+        href: code-of-conduct.qmd
+      - text: "Get involved"
+        href: join.qmd
+    right: "Built with [R](https://www.r-project.org/) and [Quarto](https://quarto.org/)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme/common.scss, theme/light.scss]
+      dark: [cosmo, theme/common.scss, theme/dark.scss]
+    respect-user-color-scheme: true
+    lang: en
+    link-external-newwindow: true
+    link-external-icon: false
+    smooth-scroll: true
+
+execute:
+  freeze: auto

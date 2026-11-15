@@ -1,0 +1,47 @@
+---
+title: "Community Launch Meetup"
+subtitle: "Meet fellow R users and help shape the community"
+# TODO: confirm the date, time and venue, then update the fields below
+date: 2026-12-12
+time: "14:00–17:00 EAT"
+location: "Dar es Salaam (venue to be announced) and online"
+attendance: "Hybrid"
+description: "Our first gathering. Meet other R users, hear our plans for the year and tell us what you'd like this community to do."
+categories: [Meetup]
+---
+
+::: {.event-details}
+[Time]{.label}
+{{< meta time >}}
+
+[Where]{.label}
+{{< meta location >}}
+
+[Format]{.label}
+{{< meta attendance >}}
+
+[Cost]{.label}
+Free
+:::
+
+Karibu! This is the first official meetup of {{< var org.name >}}. Whether you use R every day or you're just curious about it, come and meet the people building an R community in Tanzania.
+
+## What to expect
+
+- **Welcome and introductions.** Who we are and why we started this community.
+- **Lightning talks.** Three or four short talks (5 minutes each) from members about how they use R. [Want to give one?](../../join.qmd#speak)
+- **Open discussion.** What should we do in 2027? Workshops, study groups, hackathons, a conference? You decide.
+- **Networking.** Chai, conversation and new connections.
+
+## Who should come
+
+Everyone is welcome: students, researchers, analysts, developers and complete beginners. You don't need to bring a laptop.
+
+## How to register
+
+Registration is free. <!-- TODO: replace with the real registration link, e.g. a Meetup event or a Google Form -->
+Join our [community channels](../../join.qmd) to get the registration link and venue details as soon as they're confirmed.
+
+Questions? Email us at [{{< var contact.email >}}](mailto:{{< var contact.email >}}).
+
+All our events follow the [Code of Conduct](../../code-of-conduct.qmd).

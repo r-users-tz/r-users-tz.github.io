@@ -1,0 +1,62 @@
+<%
+// Event listing template.
+// template-params (set in the listing YAML):
+//   when:  "upcoming", "past" or "all" (default "all")
+//   limit: maximum number of events to show (optional)
+//   empty: text to show when there are no matching events
+// The listing must set date-format: "YYYY-MM-DD" so dates can be compared.
+const params = (typeof templateParams !== 'undefined' && templateParams) ? templateParams : {};
+const when = params.when || 'all';
+const limit = params.limit ? Number(params.limit) : 0;
+const emptyText = params.empty || 'No events to show yet.';
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// Today's date in East Africa Time (UTC+3), as YYYY-MM-DD.
+// Events move from "upcoming" to "past" the day after they happen, on the next render.
+const today = new Date(Date.now() + 3 * 60 * 60 * 1000).toISOString().slice(0, 10);
+const isoDate = (item) => item.date ? String(item.date).slice(0, 10) : '';
+
+let shown = items.filter((item) => {
+  const d = isoDate(item);
+  if (when === 'upcoming') return d !== '' && d >= today;
+  if (when === 'past') return d !== '' && d < today;
+  return true;
+});
+if (when === 'upcoming') shown.sort((a, b) => isoDate(a).localeCompare(isoDate(b)));
+if (when === 'past') shown.sort((a, b) => isoDate(b).localeCompare(isoDate(a)));
+if (limit > 0) shown = shown.slice(0, limit);
+%>
+
+```{=html}
+<% if (shown.length === 0) { %>
+<div class="empty-state"><p><%= emptyText %></p></div>
+<% } else { %>
+<div class="event-list list">
+<% for (const item of shown) {
+     const d = isoDate(item);
+     const parts = d.split('-');
+     const past = d !== '' && d < today;
+%>
+  <a class="event-card<%= past ? ' is-past' : '' %>" href="<%- item.path %>" <%= metadataAttrs(item) %>>
+    <% if (parts.length === 3) { %>
+    <div class="event-date" aria-hidden="true">
+      <span class="event-date-month"><%= months[Number(parts[1]) - 1] %></span>
+      <span class="event-date-day"><%= Number(parts[2]) %></span>
+      <span class="event-date-year"><%= parts[0] %></span>
+    </div>
+    <% } %>
+    <div class="event-body">
+      <h3 class="no-anchor"><%= item.title %></h3>
+      <p class="event-meta">
+        <% if (parts.length === 3) { %><span class="visually-hidden">Date: <%= Number(parts[2]) %> <%= months[Number(parts[1]) - 1] %> <%= parts[0] %></span><% } %>
+        <% if (item.time) { %><span><i class="bi bi-clock" aria-hidden="true"></i><%= item.time %></span><% } %>
+        <% if (item.location) { %><span><i class="bi bi-geo-alt" aria-hidden="true"></i><%= item.location %></span><% } %>
+        <% if (item.attendance) { %><span class="event-format"><%= item.attendance %></span><% } %>
+      </p>
+      <% if (item.description) { %><p class="event-description"><%= item.description %></p><% } %>
+    </div>
+  </a>
+<% } %>
+</div>
+<% } %>
+```

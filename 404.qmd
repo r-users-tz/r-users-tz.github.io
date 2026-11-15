@@ -1,0 +1,9 @@
+---
+title: "Page not found"
+subtitle: "Samahani! We couldn't find that page."
+toc: false
+---
+
+The page you were looking for may have moved or no longer exists.
+
+[Go to the home page](index.qmd){.btn .btn-primary} [See upcoming events](events.qmd){.btn .btn-outline-tz}

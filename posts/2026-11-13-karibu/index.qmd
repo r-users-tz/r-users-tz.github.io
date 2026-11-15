@@ -1,0 +1,44 @@
+---
+title: "Karibu! Welcome to the Tanzanian R Users community"
+description: "Why we started this community, what we're planning and how you can be part of it from day one."
+author: "The Tanzanian R Users team"
+date: 2026-11-13
+categories: [News, Community]
+---
+
+Karibu sana! Welcome to the new home of **{{< var org.name >}}**, a community for everyone in Tanzania who uses the R programming language, or would like to learn it.
+
+## Why a community for R users in Tanzania?
+
+R is free, open-source software for statistics, data analysis and visualisation. Across Tanzania, people already use it to analyse survey and health data, study crop yields and rainfall, write theses and build dashboards. But many of us learn alone, searching online late at night for the meaning of an error message.
+
+We think learning is faster, and a lot more fun, when we do it together. This community is a place to:
+
+- **meet** other people who use R, at your level and in your field;
+- **learn** through talks, hands-on workshops and study groups;
+- **share** code, tutorials, data sources and job opportunities;
+- **grow** a stronger data culture in Tanzania, one analysis at a time.
+
+## What we're planning
+
+Over the coming months we'll start with:
+
+1. **A launch meetup** in Dar es Salaam, also streamed online. [See the details](../../events/2026-12-12-launch-meetup/index.qmd).
+2. **Regular meetups** with short talks from members about how they use R.
+3. **Beginner workshops** for people who have never written a line of code.
+4. **This blog**, with tutorials, project write-ups and event recaps written by members. Our first tutorial, [Your first steps in R](../2026-11-13-first-steps-in-r/index.qmd), is already up.
+
+We'll decide the rest together. Tell us what you'd find most useful.
+
+## How you can help
+
+- **Join our channels** so you hear about events first. [Find them here](../../join.qmd).
+- **Offer a lightning talk.** Five minutes on anything you've done with R. First-time speakers are very welcome.
+- **Write a blog post** about a project, a package you love or something you learned the hard way.
+- **Tell a friend**, a classmate or a colleague who works with data.
+
+## A welcoming space
+
+Everyone who takes part, online or in person, agrees to our [Code of Conduct](../../code-of-conduct.qmd). Conversations can happen in English and Kiswahili, and no question is too basic.
+
+Tuonane hivi karibuni. See you soon!

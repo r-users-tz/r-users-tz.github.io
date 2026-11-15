@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+
+$primary: #5BD68A;
+$info: #4CC3EE;
+$body-bg: #0E1511;
+$body-color: #E4EBE6;
+$link-color: #5BD68A;
+$code-color: #7DD3F0;
+$pre-color: #D5DED8;
+$border-color: #26352C;
+$body-secondary-bg: #16211B;
+$body-tertiary-bg: #121C16;
+
+$navbar-bg: #0E1511;
+$navbar-fg: #E4EBE6;
+$navbar-hl: #5BD68A;
+
+$footer-bg: #080D0A;
+$footer-fg: #B9C6BE;
+
+/*-- scss:rules --*/
+
+:root {
+  // the flag's black band would vanish on a near-black page, so lift it slightly
+  --tz-flag-stripe: linear-gradient(90deg,
+      #1EB53A 0 40%, #FCD116 40% 43%, #3A3F3C 43% 57%,
+      #FCD116 57% 60%, #00A3DD 60% 100%);
+  --tz-hero-bg:
+    radial-gradient(48rem 28rem at 100% 0%, rgba(0, 163, 221, .14), transparent 65%),
+    radial-gradient(48rem 28rem at 0% 0%, rgba(30, 181, 58, .16), transparent 65%),
+    #0E1511;
+  --tz-section-alt-bg: #121C16;
+  --tz-card-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  --tz-eyebrow: #9BE7B7;
+  --tz-eyebrow-bg: rgba(91, 214, 138, .14);
+  --tz-kicker: #5BD68A;
+  --tz-accent-1: #5BD68A;
+  --tz-accent-2: #4CC3EE;
+  --tz-date-head-bg: #17733B;
+  --tz-past-head-bg: #4A5850;
+  --tz-green-soft: rgba(91, 214, 138, .14);
+  --tz-green-ink: #8FE3AF;
+  --tz-blue-soft: rgba(76, 195, 238, .14);
+  --tz-blue-ink: #8AD7F3;
+  --tz-yellow-soft: rgba(252, 209, 22, .14);
+  --tz-yellow-ink: #FCDF5C;
+  --tz-dark-soft: rgba(228, 235, 230, .08);
+  --tz-dark-ink: #E4EBE6;
+}
+
+// R output blocks and plain code blocks inherit a light-theme grey from the base theme
+pre,
+div.cell-output pre,
+div.cell-output pre code {
+  color: #D5DED8;
+}

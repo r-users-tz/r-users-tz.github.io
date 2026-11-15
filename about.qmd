@@ -1,0 +1,74 @@
+---
+title: "About us"
+subtitle: "Who we are, what we believe and where we're going"
+description: "The story, mission and values of the Tanzanian R Users community, and the people who organise it."
+toc: true
+toc-title: "On this page"
+---
+
+## Our story
+
+<!-- TODO: make this section personal. Why did you start the community? What moment made you decide? -->
+
+{{< var org.name >}} ({{< var org.name-sw >}}) was founded in 2026 to bring together people across Tanzania who use R, the free and open-source language for statistics, data analysis and visualisation.
+
+R is already used in Tanzanian universities, research institutes, hospitals, government offices and NGOs. Yet many users learn on their own, with few chances to meet peers, find a mentor or see how others solve the same problems. We started this community to change that.
+
+## Mission
+
+To build a welcoming, inclusive community where people in Tanzania learn R, share knowledge and use data to address local challenges.
+
+## Vision
+
+A Tanzania where anyone, in any region and at any level, can find the skills, mentors and peers they need to turn data into insight.
+
+## What we value
+
+Everyone is welcome
+: Beginners and experts, students and professionals, from every region and background.
+
+Learning by doing
+: Practical, hands-on sessions built around real problems and real data.
+
+Open knowledge
+: We share slides, code and recordings openly so that anyone can learn from them.
+
+Local relevance
+: We focus on the data and questions that matter in Tanzania.
+
+Respect
+: Everyone in our spaces follows our [Code of Conduct](code-of-conduct.qmd).
+
+## Organisers
+
+<!-- TODO: add each organiser. Put photos in images/people/ and update the image paths. -->
+
+::: {.grid}
+::: {.g-col-12 .g-col-sm-6 .g-col-lg-4}
+::: {.person-card}
+![](images/avatar-placeholder.svg){fig-alt="Photo of {{< var founder.name >}}"}
+
+### {{< var founder.name >}} {.unnumbered .unlisted}
+
+[{{< var founder.role >}}]{.person-role}
+:::
+:::
+
+::: {.g-col-12 .g-col-sm-6 .g-col-lg-4}
+::: {.person-card}
+![](images/avatar-placeholder.svg){fig-alt=""}
+
+### Could this be you? {.unnumbered .unlisted}
+
+[We're looking for volunteers to help run events, teach and spread the word. [Find out how](join.qmd#volunteer).]{.person-role}
+:::
+:::
+:::
+
+## Part of a global community
+
+R users around the world organise local groups, and we're proud to join them. If you'd like to see what's happening beyond Tanzania, have a look at [AfricaR](https://africa-r.org/), [R-Ladies](https://rladies.org/) and the [R Consortium](https://www.r-consortium.org/), which supports R user groups worldwide.
+
+## Partners and supporters
+
+We're grateful to the organisations that help us with venues, funding and expertise. Interested in supporting the community? [Here's how](join.qmd#partner).

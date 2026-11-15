@@ -1,0 +1,22 @@
+---
+# Copy this file to posts/YYYY-MM-DD-short-name/index.qmd and fill it in.
+# Put any images in the same folder as the post.
+title: "Post title"
+description: "One or two sentences shown on the blog list."
+author: "Your Name"
+date: 2027-01-30
+categories: [Tutorial]                  # e.g. News, Tutorial, Event recap, Community
+# image: cover.png                      # optional; otherwise the first image in the post is used
+---
+
+Start with a short introduction.
+
+## A section
+
+R code runs when the site is rendered:
+
+```{r}
+summary(cars)
+```
+
+Render the site with `quarto render` before pushing, so the results are saved in `_freeze/`.

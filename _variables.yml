@@ -1,0 +1,22 @@
+# One place for the community's links and contact details.
+# Pages use these with {{< var ... >}}, so changing a value here updates every page.
+# Every value that still contains TODO needs replacing before the site goes public.
+
+org:
+  name: "Tanzanian R Users"
+  name-sw: "Jumuiya ya Watumiaji wa R Tanzania"
+
+contact:
+  email: "TODO-community-email@example.org"
+
+founder:
+  name: "Kaiza Ilomo"
+  role: "Founder & Lead Organizer"
+
+links:
+  whatsapp: "https://chat.whatsapp.com/TODO"
+  linkedin: "https://www.linkedin.com/company/TODO"
+  github: "https://github.com/r-users-tz"
+  meetup: "https://www.meetup.com/TODO"
+  # A short form (Google Forms, Tally, etc.) where people can propose a talk
+  talk-form: "https://forms.gle/TODO"

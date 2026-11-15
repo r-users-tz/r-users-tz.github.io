@@ -1,0 +1,176 @@
+---
+title: "Your first steps in R: from numbers to a chart"
+description: "A gentle introduction for complete beginners. Install R, do some sums, build a small table of shop sales and draw your first chart."
+author: "The Tanzanian R Users team"
+date: 2026-11-13
+categories: [Tutorial, Beginners]
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+This tutorial is for people who have **never used R before**. By the end you'll have written a few lines of code, summarised a small table of data and drawn a chart. It takes about 30 minutes.
+
+## 1. Install R and an editor
+
+You need two free programs:
+
+1. **R**, the language itself. Download it from [CRAN](https://cran.r-project.org/) and choose Windows, macOS or Linux.
+2. **An editor** to write code in. Most beginners use [RStudio Desktop](https://posit.co/download/rstudio-desktop/). [Positron](https://positron.posit.co/) is a newer alternative from the same company.
+
+Install R first, then the editor. Open the editor and find the **Console**: that's where you type the code below and press **Enter** to run it.
+
+::: {.callout-tip}
+## No computer, or can't install software?
+
+[Posit Cloud](https://posit.cloud/) runs RStudio in your web browser. The free plan is enough for this tutorial.
+:::
+
+## 2. R as a calculator
+
+R can do arithmetic, just like a calculator:
+
+```{r}
+2 + 3
+1500 * 12
+(42000 + 38500) / 2
+```
+
+## 3. Saving values with `<-`
+
+To keep a value for later, give it a name with the arrow `<-`. Read it as "gets":
+
+```{r}
+price_per_kg <- 2500      # price of 1 kg of maize flour, in TZS
+kilos_sold <- 18
+
+price_per_kg * kilos_sold
+```
+
+Names can contain letters, numbers, `_` and `.`, but can't start with a number. Anything after `#` is a **comment**: R ignores it, but it helps people reading your code.
+
+## 4. Many values at once: vectors
+
+A **vector** holds several values of the same kind. Create one with `c()`, which stands for "combine". Here are a week of maize flour sales from a small duka (shop), Monday to Sunday:
+
+```{r}
+maize_sales <- c(42000, 38500, 45000, 40000, 51000, 63000, 57000)
+
+sum(maize_sales)    # total for the week
+mean(maize_sales)   # average per day
+max(maize_sales)    # best day
+```
+
+`sum()`, `mean()` and `max()` are **functions**: you give them something inside the brackets and they give you an answer back.
+
+::: {.callout-note}
+The shop and its numbers are made up for this tutorial.
+:::
+
+## 5. Tables of data: data frames
+
+Real data usually comes as a table, with rows and columns. In R a table is called a **data frame**. Let's record a week of sales for three products:
+
+```{r}
+sales <- data.frame(
+  day = rep(c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), times = 3),
+  product = rep(c("Maize flour", "Cooking oil", "Sugar"), each = 7),
+  amount_tzs = c(
+    42000, 38500, 45000, 40000, 51000, 63000, 57000,  # maize flour
+    25000, 27500, 24000, 26000, 31000, 39000, 34500,  # cooking oil
+    18000, 16500, 19500, 17000, 22000, 28500, 25000   # sugar
+  )
+)
+
+head(sales)   # show the first six rows
+```
+
+`rep()` repeats values, so we don't have to type every day and product by hand. In practice you would usually read a table from a file, for example with `read.csv("sales.csv")`.
+
+## 6. Add-on packages
+
+Thousands of free **packages** add extra features to R. Two of the most popular are **dplyr**, for working with tables, and **ggplot2**, for charts. Install them once:
+
+```{r}
+#| eval: false
+install.packages(c("dplyr", "ggplot2"))
+```
+
+Then load them each time you start R:
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+## 7. Summarise the week
+
+With dplyr we can ask: *how much did each product earn this week, and which was its best day?*
+
+```{r}
+weekly <- sales |>
+  group_by(product) |>
+  summarise(
+    total_tzs = sum(amount_tzs),
+    best_day = day[which.max(amount_tzs)]
+  ) |>
+  arrange(desc(total_tzs))
+
+weekly
+```
+
+Read the `|>` symbol (the **pipe**) as "and then": take `sales`, *and then* group it by product, *and then* summarise each group, *and then* sort from largest to smallest.
+
+Altogether, the shop took in **TZS `r format(sum(sales$amount_tzs), big.mark = ",")`** this week, and Saturday was the busiest day for every product.
+
+## 8. Your first chart
+
+Finally, let's draw it. ggplot2 builds a chart in layers, joined with `+`:
+
+```{r}
+#| label: fig-weekly-sales
+#| fig-cap: "Total sales per product over one week (made-up data)."
+#| fig-alt: "Horizontal bar chart of one week's sales. Maize flour earned TZS 336,500, cooking oil TZS 207,000 and sugar TZS 146,500."
+#| fig-width: 7
+#| fig-height: 3.4
+ggplot(weekly, aes(x = total_tzs, y = reorder(product, total_tzs))) +
+  geom_col(fill = "#0B6E2E", width = 0.6) +
+  geom_text(aes(label = scales::comma(total_tzs)), hjust = -0.15, size = 4) +
+  scale_x_continuous(
+    labels = scales::label_comma(),
+    expand = expansion(mult = c(0, 0.15))
+  ) +
+  labs(
+    title = "Maize flour brought in the most money this week",
+    x = "Total sales (TZS)",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title.position = "plot"
+  )
+```
+
+Line by line:
+
+- `ggplot(weekly, aes(...))` chooses the data and what goes on each axis. `reorder()` sorts the bars by size.
+- `geom_col()` draws the bars.
+- `geom_text()` writes each total next to its bar.
+- `scale_x_continuous()` adds commas to the numbers on the axis.
+- `labs()` sets the title and axis labels.
+- `theme_minimal()` and `theme()` give it a clean look.
+
+Try changing the colour `"#0B6E2E"` or the title, then run the code again.
+
+## What next?
+
+Congratulations, you've written your first R code! To keep going:
+
+- Work through the free book [R for Data Science](https://r4ds.hadley.nz/), the standard next step.
+- Browse our [learning resources](../../resources.qmd), including Tanzanian data sources to practise on.
+- [Join the community](../../join.qmd) and come to a meetup. Bring your questions.
+
+Stuck? Ask in our community channels. Everyone was a beginner once.

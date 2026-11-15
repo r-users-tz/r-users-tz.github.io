@@ -1,0 +1,190 @@
+---
+title: "Home"
+pagetitle: "Tanzanian R Users | Learn, share and grow with R"
+description: "A community for everyone in Tanzania who uses R or wants to learn it. Meetups, workshops, tutorials and a friendly place to ask questions."
+page-layout: full
+title-block-style: none
+toc: false
+body-classes: page-home
+listing:
+  - id: home-events
+    contents: events
+    template: _templates/events.ejs
+    date-format: "YYYY-MM-DD"
+    sort: "date"
+    template-params:
+      when: upcoming
+      limit: 3
+      empty: "No upcoming events are scheduled right now. Join one of our channels to hear about the next one first."
+  - id: home-posts
+    contents: posts
+    type: grid
+    sort: "date desc"
+    max-items: 3
+    grid-columns: 3
+    image-placeholder: images/listing-placeholder.svg
+    fields: [image, date, title, description]
+---
+
+::::: {.hero .column-screen}
+:::: {.hero-inner}
+::: {.hero-text}
+[<i class="bi bi-stars" aria-hidden="true"></i> Karibu! · {{< var org.name-sw >}}]{.hero-eyebrow}
+
+# Learn, share and grow with [R]{.accent} in Tanzania {.hero-title .unnumbered .unlisted}
+
+::: {.lead}
+A community for everyone in Tanzania who uses R or wants to learn it: students, researchers, analysts, statisticians and developers. We meet in person and online to share skills, solve problems together and put data to work for our communities.
+:::
+
+::: {.hero-actions}
+[Join the community](join.qmd){.btn .btn-primary .btn-lg}
+[See upcoming events](events.qmd){.btn .btn-outline-tz .btn-lg}
+:::
+:::
+
+::: {.hero-code}
+```{=html}
+<div class="hero-code-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="file">karibu.R</span></div>
+```
+
+``` r
+library(tidyverse)
+
+# Everyone is welcome, whatever your level
+tz_r_users |>
+  filter(curious) |>
+  mutate(skills = learn_together(skills)) |>
+  summarise(impact = sum(shared_knowledge))
+```
+:::
+::::
+:::::
+
+::::: {.home-section .column-screen}
+:::: {.section-inner}
+::: {.section-heading}
+::: {.heading-text}
+[What we do]{.kicker}
+
+## Practical R skills, built together {.unnumbered}
+:::
+:::
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.feature-card}
+[<i class="bi bi-people-fill"></i>]{.feature-icon .green aria-hidden="true"}
+
+### Meetups and talks {.unnumbered}
+
+Regular gatherings, in person and online, where members show how they use R at work, in research and in their studies.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.feature-card}
+[<i class="bi bi-laptop"></i>]{.feature-icon .blue aria-hidden="true"}
+
+### Hands-on workshops {.unnumbered}
+
+Beginner-friendly training in data cleaning, visualisation, statistics, Shiny apps, Quarto reports and more.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.feature-card}
+[<i class="bi bi-chat-heart"></i>]{.feature-icon .yellow aria-hidden="true"}
+
+### Learning together {.unnumbered}
+
+Study groups, a shared resource library and a friendly place to ask questions, from your first `install.packages()` onwards.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
+::: {.feature-card}
+[<i class="bi bi-globe-europe-africa"></i>]{.feature-icon .dark aria-hidden="true"}
+
+### Data for Tanzania {.unnumbered}
+
+Using R with local data on health, agriculture, education, the economy and the environment, and sharing what we learn.
+:::
+:::
+:::
+::::
+:::::
+
+::::: {.home-section .alt .column-screen}
+:::: {.section-inner}
+::: {.section-heading}
+::: {.heading-text}
+[Who it's for]{.kicker}
+
+## You're welcome here, whatever your level {.unnumbered}
+
+Whether you write R every day or have never opened RStudio, there's a place for you. Conversations happen in English and Kiswahili.
+:::
+:::
+
+::: {.audience-list}
+- Students
+- Researchers and academics
+- Public health and epidemiology
+- Agriculture and environment
+- Government and NGO analysts
+- Statisticians
+- Data scientists and developers
+- Complete beginners
+:::
+::::
+:::::
+
+::::: {.home-section .column-screen}
+:::: {.section-inner}
+::: {.section-heading}
+::: {.heading-text}
+[Events]{.kicker}
+
+## Coming up {.unnumbered}
+:::
+
+[All events <i class="bi bi-arrow-right" aria-hidden="true"></i>](events.qmd){.section-link}
+:::
+
+::: {#home-events}
+:::
+::::
+:::::
+
+::::: {.home-section .alt .column-screen}
+:::: {.section-inner}
+::: {.section-heading}
+::: {.heading-text}
+[Blog]{.kicker}
+
+## Latest from the community {.unnumbered}
+:::
+
+[All posts <i class="bi bi-arrow-right" aria-hidden="true"></i>](blog.qmd){.section-link}
+:::
+
+::: {#home-posts}
+:::
+::::
+:::::
+
+::::: {.home-section .column-screen}
+:::: {.section-inner}
+::: {.cta-band}
+## Help shape the community from the start {.unnumbered}
+
+We're just getting started, and the people who join now will decide what this community becomes. Come to a meetup, give a talk, share a resource or help organise.
+
+::: {.hero-actions}
+[Get involved](join.qmd){.btn .btn-tz .btn-lg}
+[Read our Code of Conduct](code-of-conduct.qmd){.btn .btn-outline-light-tz .btn-lg}
+:::
+:::
+::::
+:::::

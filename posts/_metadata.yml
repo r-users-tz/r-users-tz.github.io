@@ -1,0 +1,4 @@
+# Settings shared by every blog post
+toc: true
+toc-title: "On this page"
+title-block-banner: false

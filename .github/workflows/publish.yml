@@ -1,0 +1,34 @@
+# Renders the site and publishes it to GitHub Pages (the gh-pages branch).
+# Runs on every push to main, once a week (so finished events move to "Past"),
+# and on demand from the Actions tab.
+#
+# R code is NOT run here: posts are rendered on your computer and the results
+# are committed in _freeze/. Always run `quarto render` before pushing a new post.
+
+name: Publish site
+
+on:
+  push:
+    branches: main
+  schedule:
+    - cron: "0 3 * * 1"   # Mondays 03:00 UTC (06:00 EAT)
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render and publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

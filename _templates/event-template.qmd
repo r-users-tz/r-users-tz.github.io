@@ -1,0 +1,47 @@
+---
+# Copy this file to events/YYYY-MM-DD-short-name/index.qmd and fill it in.
+# The event appears under "Upcoming" until its date has passed, then moves to "Past"
+# the next time the site is rendered.
+title: "Event title"
+subtitle: "One-line summary"
+date: 2027-01-30
+time: "17:00–19:00 EAT"
+location: "Venue name, City"            # or "Online"
+attendance: "In person"                 # In person, Online or Hybrid
+description: "One or two sentences shown on the events list."
+categories: [Meetup]                    # e.g. Meetup, Workshop, Talk
+---
+
+::: {.event-details}
+[Time]{.label}
+{{< meta time >}}
+
+[Where]{.label}
+{{< meta location >}}
+
+[Format]{.label}
+{{< meta attendance >}}
+
+[Cost]{.label}
+Free
+:::
+
+What the event is about, in a short paragraph.
+
+## Speakers
+
+- **Name**, role or organisation. One-line bio.
+
+## Agenda
+
+- 17:00 Welcome
+- 17:15 Talk
+- 18:00 Questions and networking
+
+## How to register
+
+[Register here](https://example.org){.btn .btn-primary}
+
+All our events follow the [Code of Conduct](../../code-of-conduct.qmd).
+
+<!-- After the event, add a "Materials" section with links to slides, code and the recording. -->

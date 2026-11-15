@@ -1,0 +1,106 @@
+---
+title: "Get involved"
+subtitle: "There are lots of ways to take part, whatever your level"
+description: "Join the Tanzanian R Users community: our channels, giving a talk, writing for the blog, volunteering and partnering with us."
+toc: true
+toc-title: "On this page"
+---
+
+## Join our channels
+
+Membership is free and open to everyone. Pick the channel that suits you:
+
+<!-- TODO: set the real links in _variables.yml. Remove any card for a channel you don't use. -->
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+::: {.channel-card}
+[<i class="bi bi-whatsapp"></i>]{.feature-icon .green aria-hidden="true"}
+
+### WhatsApp group {.unnumbered .unlisted}
+
+Event announcements, quick questions and community news, straight to your phone.
+
+[Join on WhatsApp]({{< var links.whatsapp >}}){.btn .btn-primary}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.channel-card}
+[<i class="bi bi-calendar-event"></i>]{.feature-icon .blue aria-hidden="true"}
+
+### Meetup {.unnumbered .unlisted}
+
+Follow our Meetup page to RSVP for events and get reminders.
+
+[Follow on Meetup]({{< var links.meetup >}}){.btn .btn-primary}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.channel-card}
+[<i class="bi bi-linkedin"></i>]{.feature-icon .dark aria-hidden="true"}
+
+### LinkedIn {.unnumbered .unlisted}
+
+News, event recaps and opportunities for data professionals in Tanzania.
+
+[Follow on LinkedIn]({{< var links.linkedin >}}){.btn .btn-primary}
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.channel-card}
+[<i class="bi bi-github"></i>]{.feature-icon .yellow aria-hidden="true"}
+
+### GitHub {.unnumbered .unlisted}
+
+Slides, code from our workshops and the source of this website.
+
+[See us on GitHub]({{< var links.github >}}){.btn .btn-primary}
+:::
+:::
+:::
+
+## Give a talk {#speak}
+
+We'd love to hear how you use R, at any level. Every talk is welcome:
+
+- **Lightning talks** (5 minutes): one idea, one package, one trick.
+- **Full talks** (20–30 minutes): a project, an analysis or a method.
+- **Workshops** (1–3 hours): hands-on teaching.
+
+First-time speakers are especially welcome, and we'll gladly help you prepare.
+
+[Propose a talk]({{< var links.talk-form >}}){.btn .btn-primary}
+
+## Write for the blog {#write}
+
+Share a tutorial, a project write-up, an event recap or a story about learning R. Posts can be in English or Kiswahili.
+
+Send your draft to [{{< var contact.email >}}](mailto:{{< var contact.email >}}), or, if you know Git, open a pull request on [our GitHub]({{< var links.github >}}) with a new folder in `posts/`.
+
+## Volunteer {#volunteer}
+
+The community is run by volunteers. We'd love help with:
+
+- planning and running events;
+- teaching or assisting at workshops;
+- social media and design;
+- this website.
+
+Even an hour a month makes a difference. Email [{{< var contact.email >}}](mailto:{{< var contact.email >}}) to get started.
+
+## Partner with us {#partner}
+
+Universities, companies, research institutes, NGOs and innovation hubs can support the community by:
+
+- **hosting** a meetup or workshop at your venue;
+- **sponsoring** refreshments, internet or prizes;
+- **sharing** internships, jobs and data challenges with members.
+
+Get in touch at [{{< var contact.email >}}](mailto:{{< var contact.email >}}).
+
+## Contact
+
+For anything else, email [{{< var contact.email >}}](mailto:{{< var contact.email >}}).

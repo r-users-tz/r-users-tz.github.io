@@ -1,0 +1,37 @@
+---
+title: "Events"
+subtitle: "Meetups, workshops and talks for R users in Tanzania, in person and online"
+description: "Upcoming and past meetups, workshops and talks from the Tanzanian R Users community."
+toc: false
+listing:
+  - id: upcoming-events
+    contents: events
+    template: _templates/events.ejs
+    date-format: "YYYY-MM-DD"
+    sort: "date"
+    template-params:
+      when: upcoming
+      empty: "No upcoming events are scheduled right now. Join one of our channels to hear about the next one first."
+  - id: past-events
+    contents: events
+    template: _templates/events.ejs
+    date-format: "YYYY-MM-DD"
+    sort: "date desc"
+    template-params:
+      when: past
+      empty: "Past events will appear here, with slides, code and recordings where we have them."
+---
+
+## Upcoming events {.unnumbered}
+
+::: {#upcoming-events}
+:::
+
+## Past events {.unnumbered}
+
+::: {#past-events}
+:::
+
+## Run an event with us {.unnumbered}
+
+Want to give a talk, teach a workshop or host a meetup at your university, office or hub? We'd love to hear from you. See [how to get involved](join.qmd#speak).

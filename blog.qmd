@@ -1,0 +1,19 @@
+---
+title: "Blog"
+subtitle: "News, tutorials and stories from the Tanzanian R Users community"
+description: "News, tutorials and stories from the Tanzanian R Users community."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  feed: true
+  image-placeholder: images/listing-placeholder.svg
+  fields: [image, date, title, description, author, categories, reading-time]
+page-layout: full
+title-block-banner: false
+---
+
+Want to write for the blog? Tutorials, project write-ups and event recaps are all welcome. See [how to contribute a post](join.qmd#write).
