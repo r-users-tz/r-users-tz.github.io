@@ -1,6 +1,6 @@
 ---
 title: "Home"
-pagetitle: "Tanzanian R Users | Learn, share and grow with R"
+pagetitle: "Learn, share and grow with R"
 description: "A community for everyone in Tanzania who uses R or wants to learn it. Meetups, workshops, tutorials and a friendly place to ask questions."
 page-layout: full
 title-block-style: none
